@@ -8,24 +8,30 @@
   </head>
   <body>
     <div class="main-container">
-      <!-- Header with Score -->
+      <!-- Header -->
       <header class="header">
         <h1 class="title">🎮 Rock Paper Scissors</h1>
-        <div class="score-board">
-          <div class="score-item">
-            <span class="score-label">You</span>
-            <span class="score-count" id="userScore">0</span>
-          </div>
-          <div class="score-divider">vs</div>
-          <div class="score-item">
-            <span class="score-label">AI</span>
-            <span class="score-count" id="aiScore">0</span>
-          </div>
-        </div>
+        <p class="subtitle">Master the Game of Strategy</p>
       </header>
 
       <!-- Game Container -->
       <div class="game-container">
+        <!-- AI Side -->
+        <div class="ai-section">
+          <h2 class="section-title">AI Choice</h2>
+          <div class="icon-display" id="aiDisplay">
+            <div class="icon-placeholder">❓</div>
+          </div>
+        </div>
+
+        <!-- Center Section with VS and Countdown -->
+        <div class="center-section">
+          <div class="vs-center">
+            <span class="vs-text">VS</span>
+          </div>
+          <div class="countdown" id="countdown"></div>
+        </div>
+
         <!-- Player Side -->
         <div class="player-section">
           <h2 class="section-title">Your Choice</h2>
@@ -38,24 +44,10 @@
             <button class="choice-btn" data-choice="scissors">✂️ Scissors</button>
           </div>
         </div>
-
-        <!-- VS Center -->
-        <div class="vs-center">
-          <span class="vs-text">VS</span>
-        </div>
-
-        <!-- AI Side -->
-        <div class="ai-section">
-          <h2 class="section-title">AI Choice</h2>
-          <div class="icon-display" id="aiDisplay">
-            <div class="icon-placeholder">❓</div>
-          </div>
-        </div>
       </div>
 
       <!-- Result Section -->
       <div class="result-container" id="resultContainer">
-        <div class="countdown" id="countdown"></div>
         <div class="result-text" id="resultText"></div>
         <div class="result-details" id="resultDetails"></div>
       </div>
@@ -63,6 +55,19 @@
       <!-- Reset Button -->
       <div class="button-container">
         <button class="reset-btn" id="resetBtn">🔄 Play Again</button>
+      </div>
+
+      <!-- Score Board at Bottom -->
+      <div class="score-board">
+        <div class="score-item">
+          <span class="score-label">You</span>
+          <span class="score-count" id="userScore">0</span>
+        </div>
+        <div class="score-divider">vs</div>
+        <div class="score-item">
+          <span class="score-label">AI</span>
+          <span class="score-count" id="aiScore">0</span>
+        </div>
       </div>
     </div>
 
